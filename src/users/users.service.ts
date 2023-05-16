@@ -25,7 +25,7 @@ export class UsersService {
         await this.repo.remove(user)
     }
 
-    //TODO: Pomyśleć nad napisaniem generycznego mappera albo sprawdzenie czy nie ma libki lub type orm czegoś takiego nie posiada, zamiast ręcznie przypisywać pola.
+    //TODO: Think about implementing mapper that will map dto to entity and entity to dto - search for libraries or create one
     async edit(id: number, name: string) {
         const user = await this.repo.findOneBy({id})
         user.name = name
