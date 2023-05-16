@@ -7,7 +7,7 @@ import { ConfigModule } from "@nestjs/config";
 
 @Module({
   imports: [
-      // Domyślnie Nest nie czyta envów, trzeba zadeklarować poniżej, jakie pliki mają być użyte i w jakiej kolejności
+      // Nest don't handle environment variables from default. We have to declare .env files in line below in order.
       ConfigModule.forRoot({envFilePath: ['.env.local', '.env']}),
       UsersModule,
       TypeOrmModule.forRoot(
