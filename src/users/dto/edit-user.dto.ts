@@ -1,3 +1,3 @@
 export class EditUserDto {
-    name: string
+  name: string
 }
